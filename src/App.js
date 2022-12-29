@@ -1,10 +1,16 @@
 import React from "react";
 import ColorModeContextProvider from "./themes/colorModeContext";
 import Routes from "./routes";
+import { AuthProvider } from "./context/AuthContext";
+import NavigationScroll from "./Helpers/NavigationScroll";
 function App() {
   return (
     <ColorModeContextProvider>
-      <Routes />
+      <AuthProvider>
+        <NavigationScroll>
+          <Routes />
+        </NavigationScroll>
+      </AuthProvider>
     </ColorModeContextProvider>
   );
 }
