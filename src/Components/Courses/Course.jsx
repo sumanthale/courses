@@ -10,26 +10,28 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { data } from "./data";
+import { AuthContext } from "../../context/AuthContext";
 
 const Course = () => {
   const { id } = useParams();
+  const { courses } = useContext(AuthContext);
 
   const [course, setCourse] = useState(null);
   const navigate = useNavigate();
 
   useEffect(() => {
-    console.log(id);
-    const course = data.find((el) => el.id === +id);
-    if (course) {
-      setCourse(course);
-    } else {
-      navigate("/");
+    if (id && courses.length > 0) {
+      const course = courses.find((el) => el.id === id);
+      if (course) {
+        setCourse(course);
+      } else {
+        navigate("/");
+      }
     }
-  }, [id]);
+  }, [id, courses]);
 
   return (
     <>
@@ -420,7 +422,7 @@ const Course = () => {
                   <Typography gutterBottom variant="h3" color="white">
                     Course Completion Certificate
                   </Typography>
-                  <Typography>from Ashok IT</Typography>
+                  <Typography>from Company IT</Typography>
                 </div>
               </Grid>
             </Grid>

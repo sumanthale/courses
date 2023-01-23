@@ -48,7 +48,7 @@ const Sidebar = ({ drawerOpen, drawerToggle, window }) => {
           }}
           className="Sidebar"
         >
-          <Link to="#" className="sidebar-link">
+          <Link to="/" className="sidebar-link">
             <Typography
               sx={{
                 color: "#000",
@@ -59,7 +59,7 @@ const Sidebar = ({ drawerOpen, drawerToggle, window }) => {
               Home
             </Typography>
           </Link>
-          <Link to="#" className="sidebar-link">
+          <Link to="services" className="sidebar-link">
             <Typography
               sx={{
                 color: "#000",
@@ -70,7 +70,7 @@ const Sidebar = ({ drawerOpen, drawerToggle, window }) => {
               Services
             </Typography>
           </Link>
-          <Link to="#" className="sidebar-link">
+          <Link to="courses" className="sidebar-link">
             <Typography
               sx={{
                 color: "#000",
@@ -81,7 +81,7 @@ const Sidebar = ({ drawerOpen, drawerToggle, window }) => {
               Courses Offering
             </Typography>
           </Link>
-          <Link to="#" className="sidebar-link">
+          <Link to="about" className="sidebar-link">
             <Typography
               sx={{
                 color: "#000",
@@ -92,7 +92,7 @@ const Sidebar = ({ drawerOpen, drawerToggle, window }) => {
               About Us
             </Typography>
           </Link>
-          <Link to="#" className="sidebar-link">
+          <Link to="contact" className="sidebar-link">
             <Typography
               sx={{
                 color: "#000",
@@ -106,7 +106,7 @@ const Sidebar = ({ drawerOpen, drawerToggle, window }) => {
 
           {!!isAuthenticated ? (
             <>
-              <Link to="#" className="sidebar-link">
+              <Link to="admin" className="sidebar-link">
                 <Typography
                   sx={{
                     color: "#000",
@@ -114,18 +114,7 @@ const Sidebar = ({ drawerOpen, drawerToggle, window }) => {
                     textTransform: "uppercase",
                   }}
                 >
-                  Admin 1
-                </Typography>
-              </Link>
-              <Link to="#" className="sidebar-link">
-                <Typography
-                  sx={{
-                    color: "#000",
-                    fontWeight: "500",
-                    textTransform: "uppercase",
-                  }}
-                >
-                  Admin 2
+                  Dashboard
                 </Typography>
               </Link>
             </>

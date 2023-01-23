@@ -1,10 +1,11 @@
 import { Grid, Paper, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { AuthContext } from "../../context/AuthContext";
 import Course from "./CourseItem";
-import { data } from "./data";
 
-const Courses = () => {
+const Courses = ({ edit }) => {
+  const { courses } = useContext(AuthContext);
   //   const [courses, setCourses] = useState(data);
   return (
     <Box
@@ -22,7 +23,7 @@ const Courses = () => {
         Explore Our Courses
       </Typography>
       <Grid container spacing={2} rowSpacing={3}>
-        {data.map((course, idx) => (
+        {courses.map((course, idx) => (
           <Grid key={idx} item xs={12} sm={6} md={4} lg={3} sx={{}}>
             <Paper elevation={2}>
               <Course course={course} />

@@ -41,6 +41,8 @@ const MainLayout = () => {
         elevation={0}
         sx={{
           bgcolor: theme.palette.background.default,
+          boxShadow: "rgba(0, 0, 0, 0.25) 0px 25px 50px -12px",
+
           transition: leftDrawerOpened
             ? theme.transitions.create("width")
             : "none",

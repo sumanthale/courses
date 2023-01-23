@@ -1,16 +1,51 @@
-import * as React from "react";
+import { Grid, Paper, Typography } from "@mui/material";
+import React, { useContext, useState } from "react";
+
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
 import { Box, Rating } from "@mui/material";
-import { Movie, Visibility } from "@mui/icons-material";
+import { Delete, Edit } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../../context/AuthContext";
+import { deleteCourse } from "../../api/api";
+const AdminCourses = ({ edit }) => {
+  const { courses, setCourses } = useContext(AuthContext);
 
-export default function CourseItem({ course }) {
+  return (
+    <Box
+      sx={{
+        my: 3,
+      }}
+    >
+      <Grid container spacing={2} rowSpacing={3}>
+        {courses.map((course, idx) => (
+          <Grid key={idx} item xs={12} sm={6} md={4} lg={3}>
+            <Paper elevation={2}>
+              <CourseItem course={course} setCourses={setCourses} />
+            </Paper>
+          </Grid>
+        ))}
+      </Grid>
+    </Box>
+  );
+};
+
+export default AdminCourses;
+
+function CourseItem({ course, setCourses }) {
   const navigate = useNavigate();
+  const handelDelete = async (id) => {
+    if (
+      window.confirm("Are you sure you want to delete this course?") === true
+    ) {
+      const data = await deleteCourse(course.id);
+      if (data) {
+        setCourses((courses) => courses.filter((crs) => crs.id !== course.id));
+      }
+    }
+  };
   return (
     <Card
       sx={{
@@ -66,28 +101,27 @@ export default function CourseItem({ course }) {
         }}
       >
         <Button
-          variant="outlined"
-          color="secondary"
-          fullWidth
-          sx={{
-            color: "#222831",
-            mb: 1,
-          }}
-          startIcon={<Movie />}
-        >
-          Preview
-        </Button>
-        <Button
           variant="contained"
           color="secondary"
           fullWidth
-          startIcon={<Visibility />}
-          sx={{}}
+          startIcon={<Edit />}
+          sx={{
+            mb: 2,
+          }}
           onClick={() => {
-            navigate("/courses/" + course.id);
+            navigate("/admin/course/" + course.id);
           }}
         >
-          View Details
+          Edit
+        </Button>
+        <Button
+          variant="outlined"
+          color="error"
+          fullWidth
+          startIcon={<Delete />}
+          onClick={handelDelete}
+        >
+          Delete
         </Button>
       </Box>
     </Card>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -8,10 +8,28 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Autoplay, Pagination } from "swiper";
+import { Box } from "@mui/material";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../../firebase/firebase";
 
 export default function Slider() {
+  const [images, setImages] = useState([]);
+
+  React.useEffect(() => {
+    const fetchedData = [];
+
+    async function fetchData() {
+      const querySnapshot = await getDocs(collection(db, "images"));
+      querySnapshot.forEach((doc) => {
+        fetchedData.push(doc.data());
+      });
+      setImages(fetchedData);
+    }
+    fetchData();
+  }, []);
+
   return (
-    <>
+    <Box className="Slider">
       <Swiper
         slidesPerView={1}
         spaceBetween={30}
@@ -27,19 +45,14 @@ export default function Slider() {
         modules={[Autoplay, Pagination]}
         className="mySwiper"
       >
-        <SwiperSlide>
-          <img
-            src="https://www.ashokitech.com/uploads/banner/932868389_1671028258.png"
-            alt="my imng"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="https://www.ashokitech.com/uploads/banner/1254170965_1671029617.png"
-            alt="my imng"
-          />
-        </SwiperSlide>
+        {images
+          .filter((img) => img.selected)
+          .map((img) => (
+            <SwiperSlide key={img.id}>
+              <img src={img.url} alt="my imng" />
+            </SwiperSlide>
+          ))}
       </Swiper>
-    </>
+    </Box>
   );
 }

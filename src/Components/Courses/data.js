@@ -279,7 +279,7 @@ export const data = [
 
 <p>The constantly evolving industry needs are demanding Microservices Architecture based applications development. This is where Spring Boot with Cloud &amp; Microservices comes into the play.</p>
 
-<p>The top-notch industry concentric training which is delivered here from the hands of qualified trainers will make the students master skills in Spring Boot with Cloud &amp; Microservices. So start working towards becoming a qualified Spring Boot Microservices industry professional with the help of Ashok IT advanced training in Spring Boot with Cloud &amp; Microservices.</p>
+<p>The top-notch industry concentric training which is delivered here from the hands of qualified trainers will make the students master skills in Spring Boot with Cloud &amp; Microservices. So start working towards becoming a qualified Spring Boot Microservices industry professional with the help of Company IT advanced training in Spring Boot with Cloud &amp; Microservices.</p>
 
 <p><strong>What Makes Spring Boot with Cloud &amp; Microservices Development Unique?</strong></p>
 
@@ -557,7 +557,7 @@ Chapter-50 : Conclusion</p>
 
 <p>The constantly evolving industry needs are demanding for Fullstack Developers who can handle both Front End Development &amp; Back End Development. This is where Java Fullstack Development training comes into the play.</p>
 
-<p>The top-notch industry concentric training which is delivered here from the hands of qualified trainers will make the students master skills in Java Fullstack Development. So start working towards becoming a qualified Java Fullstack Development professional with the help of Ashok IT advanced training in Java Fullstack Development.</p>
+<p>The top-notch industry concentric training which is delivered here from the hands of qualified trainers will make the students master skills in Java Fullstack Development. So start working towards becoming a qualified Java Fullstack Development professional with the help of Company IT advanced training in Java Fullstack Development.</p>
 `,
     preReq: `<p>Anybody who wants to make a career in Software Development field can take Java Fullstack Development Training. No need of any prior knowledge to attend this training.</p>
 `,
@@ -603,7 +603,7 @@ Chapter-50 : Conclusion</p>
 
 <p>AWS offering more than 200 services and AWS using by 190+ Countries</p>
 
-<p>The top-notch industry concentric training which is delivered here from the hands of qualified trainers will make the students masters in&nbsp;<strong>&ldquo;AWS&rdquo;</strong>. &nbsp;So start working towards becoming a qualified&nbsp;<strong>Cloud Expert&nbsp;</strong>with the help of Ashok IT advanced training in&nbsp;<strong>&ldquo;AWS&rdquo;</strong>.</p>
+<p>The top-notch industry concentric training which is delivered here from the hands of qualified trainers will make the students masters in&nbsp;<strong>&ldquo;AWS&rdquo;</strong>. &nbsp;So start working towards becoming a qualified&nbsp;<strong>Cloud Expert&nbsp;</strong>with the help of Company IT advanced training in&nbsp;<strong>&ldquo;AWS&rdquo;</strong>.</p>
 `,
     preReq: `<p>Anybody who wants to make a career in Software Development field can take Java Fullstack Development Training. No need of any prior knowledge to attend this training.</p>
 `,

@@ -13,8 +13,10 @@ import { useContext } from "react";
 import { AuthContext } from "../../../context/AuthContext";
 import img from "../../../assets/images/users/user-round.svg";
 import { LockOutlined } from "@mui/icons-material";
+import LoginModal from "./Login";
+import { Link } from "react-router-dom";
 export default function AccountMenu() {
-  const { isAuthenticated } = useContext(AuthContext);
+  const { isAuthenticated, signOutUser } = useContext(AuthContext);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -23,6 +25,10 @@ export default function AccountMenu() {
   const handleClose = () => {
     setAnchorEl(null);
   };
+
+  const [openModal, setOpenModal] = React.useState(false);
+  const handleOpenModal = () => setOpenModal(true);
+  const handleCloseModal = () => setOpenModal(false);
   return (
     <React.Fragment>
       <Box
@@ -38,67 +44,77 @@ export default function AccountMenu() {
       >
         <Tooltip title="Home">
           <Button variant="text" sx={{ ml: "auto" }}>
-            <Typography
-              sx={{
+            <Link
+              to={"/"}
+              style={{
                 color: "#000",
                 fontWeight: "500",
                 textTransform: "uppercase",
+                textDecoration: "none",
               }}
             >
               Home
-            </Typography>
+            </Link>
           </Button>
         </Tooltip>
         <Tooltip title="Services">
           <Button variant="text" sx={{ ml: 2 }}>
-            <Typography
-              sx={{
+            <Link
+              to={"services"}
+              style={{
                 color: "#000",
                 fontWeight: "500",
                 textTransform: "uppercase",
+                textDecoration: "none",
               }}
             >
               Services
-            </Typography>
+            </Link>
           </Button>
         </Tooltip>
         <Tooltip title="Courses Offering">
           <Button variant="text" sx={{ ml: 2 }}>
-            <Typography
-              sx={{
+            <Link
+              to={"courses"}
+              style={{
                 color: "#000",
                 fontWeight: "500",
                 textTransform: "uppercase",
+                textDecoration: "none",
               }}
             >
               Courses Offering
-            </Typography>
+            </Link>
           </Button>
         </Tooltip>
         <Tooltip title=" About Us">
           <Button variant="text" sx={{ ml: 2 }}>
-            <Typography
-              sx={{
+            <Link
+              to={"about"}
+              style={{
                 color: "#000",
                 fontWeight: "500",
                 textTransform: "uppercase",
+                textDecoration: "none",
               }}
             >
               About Us
-            </Typography>
+            </Link>
           </Button>
         </Tooltip>
         <Tooltip title="Contact Us">
           <Button variant="text" sx={{ ml: 2 }}>
-            <Typography
-              sx={{
+            <Link
+              to={"contact"}
+              style={{
                 color: "#000",
                 fontWeight: "500",
                 textTransform: "uppercase",
+                textDecoration: "none",
               }}
             >
               Contact Us
-            </Typography>
+            </Link>
           </Button>
         </Tooltip>
 
@@ -106,28 +122,17 @@ export default function AccountMenu() {
           <>
             <Tooltip title="Contact Us">
               <Button variant="text" sx={{ ml: "auto" }}>
-                <Typography
-                  sx={{
+                <Link
+                  to={"/admin"}
+                  style={{
                     color: "#000",
                     fontWeight: "500",
                     textTransform: "uppercase",
+                    textDecoration: "none",
                   }}
                 >
-                  Admin 1
-                </Typography>
-              </Button>
-            </Tooltip>
-            <Tooltip title="Contact Us">
-              <Button variant="text" sx={{ ml: 2 }}>
-                <Typography
-                  sx={{
-                    color: "#000",
-                    fontWeight: "500",
-                    textTransform: "uppercase",
-                  }}
-                >
-                  Admin 2
-                </Typography>
+                  Dashboard
+                </Link>
               </Button>
             </Tooltip>
           </>
@@ -150,24 +155,25 @@ export default function AccountMenu() {
           </Tooltip>
         ) : (
           <>
-            <Tooltip title="Login">
-              <Button
-                variant="contained"
-                startIcon={<LockOutlined />}
-                color="secondary"
-                sx={{ ml: "auto" }}
+            <Button
+              variant="contained"
+              startIcon={<LockOutlined />}
+              color="secondary"
+              sx={{ ml: "auto" }}
+              onClick={() => {
+                handleOpenModal();
+              }}
+            >
+              <Typography
+                sx={{
+                  color: "#fff",
+                  fontWeight: "500",
+                  textTransform: "uppercase",
+                }}
               >
-                <Typography
-                  sx={{
-                    color: "#fff",
-                    fontWeight: "500",
-                    textTransform: "uppercase",
-                  }}
-                >
-                  Login
-                </Typography>
-              </Button>
-            </Tooltip>
+                Login
+              </Typography>
+            </Button>
           </>
         )}
       </Box>
@@ -180,74 +186,80 @@ export default function AccountMenu() {
         }}
       >
         {!!isAuthenticated ? (
-          <Tooltip title="Account settings">
-            <IconButton
-              onClick={handleClick}
-              size="small"
-              sx={{ ml: "auto" }}
-              aria-controls={open ? "account-menu" : undefined}
-              aria-haspopup="true"
-              aria-expanded={open ? "true" : undefined}
+          <>
+            <Tooltip title="Account settings">
+              <IconButton
+                onClick={handleClick}
+                size="small"
+                sx={{ ml: "auto" }}
+                aria-controls={open ? "account-menu" : undefined}
+                aria-haspopup="true"
+                aria-expanded={open ? "true" : undefined}
+              >
+                <Avatar sx={{ width: 38, height: 38 }} src={img}>
+                  M
+                </Avatar>
+              </IconButton>
+            </Tooltip>
+            <Menu
+              anchorEl={anchorEl}
+              id="account-menu"
+              open={open}
+              onClose={handleClose}
+              onClick={handleClose}
+              PaperProps={{
+                elevation: 0,
+                sx: {
+                  overflow: "visible",
+                  filter: "drop-shadow(0px 2px 8px rgba(0,0,0,0.32))",
+                  mt: 1.5,
+                  "& .MuiAvatar-root": {
+                    width: 32,
+                    height: 32,
+                    ml: -0.5,
+                    mr: 1,
+                  },
+                },
+              }}
+              transformOrigin={{ horizontal: "right", vertical: "top" }}
+              anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
             >
-              <Avatar sx={{ width: 38, height: 38 }} src={img}>
-                M
-              </Avatar>
-            </IconButton>
-          </Tooltip>
+              <MenuItem onClick={signOutUser}>
+                <ListItemIcon>
+                  <Logout fontSize="small" />
+                </ListItemIcon>
+                Logout
+              </MenuItem>
+            </Menu>
+          </>
         ) : (
           <>
-            <Tooltip title="Login">
-              <Button
-                variant="contained"
-                startIcon={<LockOutlined />}
-                size="small"
-                color="secondary"
-                sx={{ ml: "auto" }}
+            <Button
+              variant="contained"
+              startIcon={<LockOutlined />}
+              size="small"
+              color="secondary"
+              sx={{ ml: "auto" }}
+              onClick={() => {
+                handleOpenModal();
+              }}
+            >
+              <Typography
+                variant="h6"
+                sx={{
+                  color: "#fff",
+                  textTransform: "uppercase",
+                }}
               >
-                <Typography
-                  variant="h6"
-                  sx={{
-                    color: "#fff",
-                    textTransform: "uppercase",
-                  }}
-                >
-                  Login
-                </Typography>
-              </Button>
-            </Tooltip>
+                Login
+              </Typography>
+            </Button>
           </>
         )}
+        {openModal && (
+          <LoginModal open={openModal} handleClose={handleCloseModal} />
+        )}
       </Box>
-      <Menu
-        anchorEl={anchorEl}
-        id="account-menu"
-        open={open}
-        onClose={handleClose}
-        onClick={handleClose}
-        PaperProps={{
-          elevation: 0,
-          sx: {
-            overflow: "visible",
-            filter: "drop-shadow(0px 2px 8px rgba(0,0,0,0.32))",
-            mt: 1.5,
-            "& .MuiAvatar-root": {
-              width: 32,
-              height: 32,
-              ml: -0.5,
-              mr: 1,
-            },
-          },
-        }}
-        transformOrigin={{ horizontal: "right", vertical: "top" }}
-        anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
-      >
-        <MenuItem>
-          <ListItemIcon>
-            <Logout fontSize="small" />
-          </ListItemIcon>
-          Logout
-        </MenuItem>
-      </Menu>
     </React.Fragment>
   );
 }

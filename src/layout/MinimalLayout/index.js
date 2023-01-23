@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useContext } from "react";
-import { Outlet, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 
 // project imports
@@ -8,20 +8,16 @@ import { AuthContext } from "../../context/AuthContext";
 
 // ==============================|| MINIMAL LAYOUT ||============================== //
 
-const MinimalLayout = () => {
+const MinimalLayout = ({ children }) => {
   const { isAuthenticated } = useContext(AuthContext);
   const navigate = useNavigate();
   useEffect(() => {
-    if (isAuthenticated) {
+    if (!isAuthenticated) {
       navigate("/");
     }
   }, []);
 
-  return (
-    <>
-      <Outlet />
-    </>
-  );
+  return <>{children}</>;
 };
 
 export default MinimalLayout;
