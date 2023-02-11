@@ -1,7 +1,15 @@
 import React, { useState } from "react";
-import { Box, Typography } from "@mui/material";
-import { collection, doc, getDocs, setDoc } from "firebase/firestore";
-import { db } from "../../firebase/firebase";
+import { Box, IconButton, Typography } from "@mui/material";
+import {
+  collection,
+  deleteDoc,
+  doc,
+  getDocs,
+  setDoc,
+} from "firebase/firestore";
+import { db, storage } from "../../firebase/firebase";
+import { DeleteRounded } from "@mui/icons-material";
+import { deleteObject, ref } from "firebase/storage";
 
 const Banners = () => {
   const [images, setImages] = useState([]);
@@ -40,16 +48,34 @@ const Banners = () => {
       setImages(imagesCopy);
     }
   };
+
+  const deleteImage = async (image) => {
+    try {
+      let storageRef = ref(storage, image.id);
+
+      await deleteObject(storageRef);
+      await deleteDoc(doc(db, "images", image.id));
+      const filteredData = images.filter((img) => img.id !== image.id);
+      setImages(filteredData);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <div className="banner">
-      <ImageList images={images} updateImages={updateImages} />
+      <ImageList
+        images={images}
+        updateImages={updateImages}
+        deleteImage={deleteImage}
+      />
     </div>
   );
 };
 
 export default Banners;
 
-const Image = ({ image, updateImages }) => {
+const Image = ({ image, updateImages, deleteImage }) => {
   return (
     <div
       className="file-item"
@@ -57,6 +83,25 @@ const Image = ({ image, updateImages }) => {
         updateImages(image);
       }}
     >
+      <IconButton
+        className="file-item-delete-icon"
+        aria-label="delete"
+        sx={{
+          position: "absolute",
+          right: 0,
+          zIndex: 999,
+        }}
+        onClick={(e) => {
+          e.stopPropagation();
+          deleteImage(image);
+        }}
+      >
+        <DeleteRounded
+          sx={{
+            color: "#ff0000",
+          }}
+        />
+      </IconButton>
       {image.selected && (
         <Box
           className="overlay"
@@ -79,18 +124,24 @@ const Image = ({ image, updateImages }) => {
           </Typography>
         </Box>
       )}
-      <img alt={`img -${image.id} `} src={image.url} className="file-img" />
+      <img
+        loading="lazy"
+        alt={`img -${image.id} `}
+        src={image.url}
+        className="file-img"
+      />
     </div>
   );
 };
 
-const ImageList = ({ images, updateImages }) => {
+const ImageList = ({ images, updateImages, deleteImage }) => {
   const renderImage = (image, index) => {
     return (
       <Image
         image={image}
         key={`${image.id}-image`}
         updateImages={updateImages}
+        deleteImage={deleteImage}
       />
     );
   };

@@ -5,8 +5,9 @@ import {
   setDoc,
   updateDoc,
 } from "firebase/firestore";
-import { db } from "../firebase/firebase";
+import { db, storage } from "../firebase/firebase";
 import uniqid from "uniqid";
+import { deleteObject, ref } from "firebase/storage";
 
 export const deleteCourse = async (courseID) => {
   try {
@@ -17,9 +18,7 @@ export const deleteCourse = async (courseID) => {
     return false;
   }
 };
-export const appendImage = async (URL) => {
-  const genratedID = uniqid();
-
+export const appendImage = async (URL, genratedID) => {
   const imageRef = doc(db, "images", genratedID);
   await setDoc(imageRef, {
     url: URL,
@@ -27,5 +26,3 @@ export const appendImage = async (URL) => {
     selected: false,
   });
 };
-
-const deleteImage = async (URL) => {};

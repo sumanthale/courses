@@ -3,7 +3,8 @@ export const data = [
     id: 1,
     category: "XXX",
     name: "Data Structures & Algorithms",
-    image: "https://www.ashokitech.com/uploads/course/DATA%20STURCTURE.jpg",
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/courses-4d59c.appspot.com/o/lda6ikps?alt=media&token=7b02c6b4-6397-447d-ab0a-a131d0ac1d0e",
     about: `<p>The constantly evolving industry needs are demanding more skilled developers who are good in writing effective programs with best algorithms and good in problems solving. This is where Data Structures with Algorithms comes into the play.</p>
 
 <p><strong>What is a Data Structure?</strong></p>
@@ -91,7 +92,7 @@ export const data = [
     category: "XXX",
     name: "Python Fullstack",
     image:
-      "https://www.ashokitech.com/uploads/course/python-fullstack-online-training.jpeg",
+      "https://firebasestorage.googleapis.com/v0/b/courses-4d59c.appspot.com/o/lda6iw83?alt=media&token=d17c6f05-d78d-4439-b5dc-968b0a93530f",
     about: `<p><strong>About The Course</strong></p>
 
 <ul>
@@ -134,7 +135,7 @@ export const data = [
     category: "XXX",
     name: "Angular",
     image:
-      "https://www.ashokitech.com/uploads/course/angular-online-training.png",
+      "https://firebasestorage.googleapis.com/v0/b/courses-4d59c.appspot.com/o/lda6koy7?alt=media&token=68f7761b-4734-4cfe-9220-d430073fce4d",
     about: `<ul>
 	<li>Angular is a client side framework which is used to develop Single Page Web Applications.</li>
 	<li>The constantly evolving industry needs are demanding web designers &amp; developers build unique ways of enhancing customer experience. This is where Angular development comes into the play.</li>
@@ -206,7 +207,7 @@ export const data = [
     category: "XXX",
     name: "React JS",
     image:
-      "https://www.ashokitech.com/uploads/course/react-js-online-training.png",
+      "https://firebasestorage.googleapis.com/v0/b/courses-4d59c.appspot.com/o/lda6kwpz?alt=media&token=e1c6f30f-18b5-4820-9deb-f37e185017f3",
     about: `<ul>
 	<li>React is a JavaScript library for building user interfaces.</li>
 	<li>It is an open-source, component-based front end library responsible only for the view layer of the application.&nbsp;</li>
@@ -272,14 +273,14 @@ export const data = [
     category: "XXX",
     name: "Spring Boot & Microservices",
     image:
-      "https://www.ashokitech.com/uploads/course/spring-boot-microservices-online-training.jpeg",
+      "https://firebasestorage.googleapis.com/v0/b/courses-4d59c.appspot.com/o/lda6lf0u?alt=media&token=a50039d3-9351-4f8e-872c-8ec35568ada3",
     about: `<p>&nbsp;</p>
 
 <p><strong>About The Course</strong></p>
 
 <p>The constantly evolving industry needs are demanding Microservices Architecture based applications development. This is where Spring Boot with Cloud &amp; Microservices comes into the play.</p>
 
-<p>The top-notch industry concentric training which is delivered here from the hands of qualified trainers will make the students master skills in Spring Boot with Cloud &amp; Microservices. So start working towards becoming a qualified Spring Boot Microservices industry professional with the help of Company IT advanced training in Spring Boot with Cloud &amp; Microservices.</p>
+<p>The top-notch industry concentric training which is delivered here from the hands of qualified trainers will make the students master skills in Spring Boot with Cloud &amp; Microservices. So start working towards becoming a qualified Spring Boot Microservices industry professional with the help of LTB infotech IT advanced training in Spring Boot with Cloud &amp; Microservices.</p>
 
 <p><strong>What Makes Spring Boot with Cloud &amp; Microservices Development Unique?</strong></p>
 
@@ -378,7 +379,7 @@ Chapter-50 : Conclusion</p>
     category: "XXX",
     name: "Java Realtime Project",
     image:
-      "https://www.ashokitech.com/uploads/course/java-realtime-project-online-training.png",
+      "https://firebasestorage.googleapis.com/v0/b/courses-4d59c.appspot.com/o/lda6ls8j?alt=media&token=2100a4b3-23a3-4dc6-a54e-fe485b730af3",
     about: `<p>This advanced expert driven training program of Java Real-time Project Fullstack Development will make the students towards mastering their skills in Java Real-time tools, Industry Standards, Coding Best Practices, Spring Core, Spring Data JPA, Spring Web MVC, RESTful Services, Spring Cloud, Spring Security, Microservices and core concepts as well.</p>
 
 <p><strong>About The Course</strong></p>
@@ -480,7 +481,7 @@ Chapter-50 : Conclusion</p>
     category: "XXX",
     name: "Java Fullstack",
     image:
-      "https://www.ashokitech.com/uploads/course/java-fullstack-development-online-training.jpeg",
+      "https://firebasestorage.googleapis.com/v0/b/courses-4d59c.appspot.com/o/lda6mabx?alt=media&token=c14755ab-00e0-4f1f-9cc5-3e21b49ca6e3",
     about: `<p>To understand what a full stack developer first we have to know how the web is structured</p>
 
 <p>There are two major components in application they are</p>
@@ -557,7 +558,7 @@ Chapter-50 : Conclusion</p>
 
 <p>The constantly evolving industry needs are demanding for Fullstack Developers who can handle both Front End Development &amp; Back End Development. This is where Java Fullstack Development training comes into the play.</p>
 
-<p>The top-notch industry concentric training which is delivered here from the hands of qualified trainers will make the students master skills in Java Fullstack Development. So start working towards becoming a qualified Java Fullstack Development professional with the help of Company IT advanced training in Java Fullstack Development.</p>
+<p>The top-notch industry concentric training which is delivered here from the hands of qualified trainers will make the students master skills in Java Fullstack Development. So start working towards becoming a qualified Java Fullstack Development professional with the help of LTB infotech IT advanced training in Java Fullstack Development.</p>
 `,
     preReq: `<p>Anybody who wants to make a career in Software Development field can take Java Fullstack Development Training. No need of any prior knowledge to attend this training.</p>
 `,
@@ -594,7 +595,8 @@ Chapter-50 : Conclusion</p>
     id: 8,
     category: "XXX",
     name: "AWS",
-    image: "https://www.ashokitech.com/uploads/course/aws-online-training.jpg",
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/courses-4d59c.appspot.com/o/lda6mkaq?alt=media&token=2fffdcdc-29d7-4266-b621-471fa70582b9",
     about: `<p>The constantly evolving industry needs are demanding more skilled administrators who are good in managing application and application related infrastructure. This is where&nbsp;<strong>&ldquo;AWS&rdquo;&nbsp;</strong>comes into the play.</p>
 
 <p>AWS stands for Amazon Webservices, it is one of the leading Cloud Platform in the market</p>
@@ -603,7 +605,7 @@ Chapter-50 : Conclusion</p>
 
 <p>AWS offering more than 200 services and AWS using by 190+ Countries</p>
 
-<p>The top-notch industry concentric training which is delivered here from the hands of qualified trainers will make the students masters in&nbsp;<strong>&ldquo;AWS&rdquo;</strong>. &nbsp;So start working towards becoming a qualified&nbsp;<strong>Cloud Expert&nbsp;</strong>with the help of Company IT advanced training in&nbsp;<strong>&ldquo;AWS&rdquo;</strong>.</p>
+<p>The top-notch industry concentric training which is delivered here from the hands of qualified trainers will make the students masters in&nbsp;<strong>&ldquo;AWS&rdquo;</strong>. &nbsp;So start working towards becoming a qualified&nbsp;<strong>Cloud Expert&nbsp;</strong>with the help of LTB infotech IT advanced training in&nbsp;<strong>&ldquo;AWS&rdquo;</strong>.</p>
 `,
     preReq: `<p>Anybody who wants to make a career in Software Development field can take Java Fullstack Development Training. No need of any prior knowledge to attend this training.</p>
 `,

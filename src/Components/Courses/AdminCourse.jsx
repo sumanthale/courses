@@ -28,8 +28,8 @@ import { CloseOutlined } from "@mui/icons-material";
 import { doc, setDoc } from "firebase/firestore";
 import uniqid from "uniqid";
 import { AuthContext } from "../../context/AuthContext";
-import { appendImage } from "../../api/api";
 import Drop from "./DropZone/Drop";
+import { data } from "./data";
 
 const modules = {
   toolbar: [
@@ -105,13 +105,14 @@ const AdminCourse = () => {
       delete courseObj.submit;
 
       if (image.file) {
-        let storageRef = ref(storage, uniqid());
+        const unid = uniqid();
+        let storageRef = ref(storage, unid);
 
         await uploadBytes(storageRef, image.file);
         console.log("Uploaded a blob or file!");
         const URL = await getDownloadURL(storageRef);
         if (URL) {
-          appendImage(URL);
+          // appendImage(URL, unid);
           courseObj.image = URL;
         } else {
           console.log("Image Failed To Upload");
@@ -157,6 +158,11 @@ const AdminCourse = () => {
 
     setCourses((courses) => [...courses, courseObj]);
   };
+  // useEffect(() => {
+  //   data.forEach((el) => {
+  //     createCourse(el);
+  //   });
+  // }, []);
 
   return (
     <Box

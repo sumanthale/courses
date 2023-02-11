@@ -237,7 +237,7 @@ export default function Reviews() {
                 marginRight: "40px",
               }}
               primary={re.name}
-              secondary={re.review}
+              secondary={<p className="text-truncate-3">{re.review}</p>}
             />
           </ListItem>
         ))}

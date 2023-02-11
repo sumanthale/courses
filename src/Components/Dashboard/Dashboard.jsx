@@ -1,10 +1,9 @@
-import { Box, Button } from "@mui/material";
+import { AppBar, Box, Button } from "@mui/material";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import AdminCourses from "../Courses/AdminCourses";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
-import Typography from "@mui/material/Typography";
 import Reviews from "../Admin/Reviews";
 import Banners from "../Admin/Banners";
 import UploadBanners from "../Admin/UploadBanners";
@@ -19,19 +18,33 @@ const Dashboard = () => {
 
   return (
     <Box sx={{ width: "100%" }}>
-      <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+      <AppBar
+        position="static"
+        sx={{
+          backgroundColor: "#fff",
+          mt: 1,
+        }}
+      >
         <Tabs
           value={value}
           onChange={handleChange}
+          indicatorColor="primary"
           aria-label="basic tabs example"
-          variant="fullWidth"
+          textColor="primary"
+          variant="scrollable"
+          scrollButtons="auto"
+          sx={{
+            "& .MuiTabs-flexContainer": {
+              justifyContent: "space-evenly",
+            },
+          }}
         >
           <Tab label="Courses" {...a11yProps(0)} />
           <Tab label="Reviews" {...a11yProps(1)} />
           <Tab label="Banners" {...a11yProps(2)} />
           <Tab label="Upload Images" {...a11yProps(2)} />
         </Tabs>
-      </Box>
+      </AppBar>
       <TabPanel value={value} index={0}>
         <Box
           sx={{

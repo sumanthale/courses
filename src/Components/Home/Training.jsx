@@ -44,6 +44,7 @@ const Training = () => {
             <Paper elevation={2} className="training-item">
               <span className="icon feature_box_col_one">
                 <img
+                  loading="lazy"
                   data-src="https://www.ashokitech.com/assets/frontend/images/training1.png"
                   alt="classroom-training"
                   className="center serviceImg lazyloaded"
@@ -78,6 +79,7 @@ const Training = () => {
             <Paper elevation={2} className="training-item">
               <span className="icon feature_box_col_two">
                 <img
+                  loading="lazy"
                   data-src="https://www.ashokitech.com/assets/frontend/images/training2.png"
                   alt="classroom-training"
                   className="center serviceImg lazyloaded"
@@ -90,7 +92,7 @@ const Training = () => {
                   State-of-the-art infrastructure
                 </Typography>
                 <Typography className="training-info">
-                  At Company IT Students study in a learning environment
+                  At LTB infotech IT Students study in a learning environment
                   supported by state-of-the-art infrastructure, new and
                   innovative teaching techniques, and high-end technological
                   educational resources.
@@ -112,6 +114,7 @@ const Training = () => {
             <Paper elevation={2} className="training-item">
               <span className="icon feature_box_col_three">
                 <img
+                  loading="lazy"
                   data-src="https://www.ashokitech.com/assets/frontend/images/training3.png"
                   alt="classroom-training"
                   className="center serviceImg lazyloaded"
@@ -125,7 +128,7 @@ const Training = () => {
                   We adopt an integrated approach to training that helps our
                   students get both the IT knowledge and skills required to
                   handle the challenging corporate responsibilities. Theoretical
-                  learning at Company IT is adequately complemented by
+                  learning at LTB infotech IT is adequately complemented by
                   practice-based heuristic learning that allows our students to
                   learn in an industry-specific way.
                 </Typography>
@@ -146,6 +149,7 @@ const Training = () => {
             <Paper elevation={2} className="training-item">
               <span className="icon feature_box_col_four">
                 <img
+                  loading="lazy"
                   data-src="https://www.ashokitech.com/assets/frontend/images/training4.png"
                   alt="conference"
                   className="center serviceImg lazyloaded"

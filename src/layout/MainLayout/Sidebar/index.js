@@ -59,7 +59,7 @@ const Sidebar = ({ drawerOpen, drawerToggle, window }) => {
               Home
             </Typography>
           </Link>
-          <Link to="services" className="sidebar-link">
+          {/* <Link to="services" className="sidebar-link">
             <Typography
               sx={{
                 color: "#000",
@@ -69,7 +69,7 @@ const Sidebar = ({ drawerOpen, drawerToggle, window }) => {
             >
               Services
             </Typography>
-          </Link>
+          </Link> */}
           <Link to="courses" className="sidebar-link">
             <Typography
               sx={{
@@ -92,7 +92,7 @@ const Sidebar = ({ drawerOpen, drawerToggle, window }) => {
               About Us
             </Typography>
           </Link>
-          <Link to="contact" className="sidebar-link">
+          {/* <Link to="contact" className="sidebar-link">
             <Typography
               sx={{
                 color: "#000",
@@ -102,7 +102,7 @@ const Sidebar = ({ drawerOpen, drawerToggle, window }) => {
             >
               Contact Us
             </Typography>
-          </Link>
+          </Link> */}
 
           {!!isAuthenticated ? (
             <>

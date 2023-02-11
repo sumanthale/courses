@@ -12,7 +12,7 @@ import { Button } from "@mui/material";
 import { useContext } from "react";
 import { AuthContext } from "../../../context/AuthContext";
 import img from "../../../assets/images/users/user-round.svg";
-import { LockOutlined } from "@mui/icons-material";
+import { AppRegistrationRounded, LockOutlined } from "@mui/icons-material";
 import LoginModal from "./Login";
 import { Link } from "react-router-dom";
 export default function AccountMenu() {
@@ -57,7 +57,7 @@ export default function AccountMenu() {
             </Link>
           </Button>
         </Tooltip>
-        <Tooltip title="Services">
+        {/* <Tooltip title="Services">
           <Button variant="text" sx={{ ml: 2 }}>
             <Link
               to={"services"}
@@ -71,8 +71,8 @@ export default function AccountMenu() {
               Services
             </Link>
           </Button>
-        </Tooltip>
-        <Tooltip title="Courses Offering">
+        </Tooltip> */}
+        <Tooltip title="Services We Offer">
           <Button variant="text" sx={{ ml: 2 }}>
             <Link
               to={"courses"}
@@ -83,7 +83,7 @@ export default function AccountMenu() {
                 textDecoration: "none",
               }}
             >
-              Courses Offering
+              Services We Offer
             </Link>
           </Button>
         </Tooltip>
@@ -102,7 +102,7 @@ export default function AccountMenu() {
             </Link>
           </Button>
         </Tooltip>
-        <Tooltip title="Contact Us">
+        {/* <Tooltip title="Contact Us">
           <Button variant="text" sx={{ ml: 2 }}>
             <Link
               to={"contact"}
@@ -116,7 +116,7 @@ export default function AccountMenu() {
               Contact Us
             </Link>
           </Button>
-        </Tooltip>
+        </Tooltip> */}
 
         {!!isAuthenticated ? (
           <>
@@ -157,9 +157,32 @@ export default function AccountMenu() {
           <>
             <Button
               variant="contained"
+              startIcon={<AppRegistrationRounded />}
+              color="error"
+              sx={{ ml: "auto", mr: 1 }}
+              onClick={() => {
+                window.open(
+                  "https://docs.google.com/forms/d/e/1FAIpQLSear9P1bEHV8C60rTBO2mT2BJf3UQAglbeqyKOdFyAu3KGH5Q/viewform",
+                  "_blank",
+                  "noreferrer"
+                );
+              }}
+            >
+              <Typography
+                sx={{
+                  color: "#fff",
+                  fontWeight: "500",
+                  textTransform: "uppercase",
+                }}
+              >
+                Register
+              </Typography>
+            </Button>
+            <Button
+              variant="contained"
               startIcon={<LockOutlined />}
               color="secondary"
-              sx={{ ml: "auto" }}
+              // sx={{ ml: "auto" }}
               onClick={() => {
                 handleOpenModal();
               }}
@@ -236,10 +259,34 @@ export default function AccountMenu() {
           <>
             <Button
               variant="contained"
+              startIcon={<AppRegistrationRounded />}
+              size="small"
+              color="error"
+              sx={{ ml: "auto", mr: 1 }}
+              onClick={() => {
+                window.open(
+                  "https://docs.google.com/forms/d/e/1FAIpQLSear9P1bEHV8C60rTBO2mT2BJf3UQAglbeqyKOdFyAu3KGH5Q/viewform",
+                  "_blank",
+                  "noreferrer"
+                );
+              }}
+            >
+              <Typography
+                variant="h6"
+                sx={{
+                  color: "#fff",
+                  textTransform: "uppercase",
+                }}
+              >
+                Register
+              </Typography>
+            </Button>
+            <Button
+              variant="contained"
               startIcon={<LockOutlined />}
               size="small"
               color="secondary"
-              sx={{ ml: "auto" }}
+              // sx={{ ml: "auto" }}
               onClick={() => {
                 handleOpenModal();
               }}

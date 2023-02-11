@@ -22,19 +22,19 @@ export const AuthProvider = ({ children }) => {
   const timeout = useRef();
   console.log("AuthProvider", { isLoading });
 
-  function login({ email, password }) {
-    signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        // Signed in
-        const user = userCredential.user;
-        // ...
+  async function login({ email, password }) {
+    try {
+      const user = await signInWithEmailAndPassword(auth, email, password);
+      if (user) {
         navigate("/admin");
-      })
-      .catch((error) => {
-        const errorMessage = error.message;
-        console.log(errorMessage);
-        setErrorMessage("Invalid Email/Password");
-      });
+      }
+      return true;
+    } catch (error) {
+      const errorMessage = error.message;
+      console.log(errorMessage);
+      setErrorMessage("Invalid Email/Password");
+      return false;
+    }
   }
 
   function signOutUser() {

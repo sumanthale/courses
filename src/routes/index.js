@@ -6,7 +6,6 @@ import MainLayout from "../layout/MainLayout";
 import Courses from "../Components/Courses/Courses";
 import Course from "../Components/Courses/Course";
 import About from "../Components/About/About";
-import Contact from "../Components/About/Contact";
 import Dashboard from "../Components/Dashboard/Dashboard";
 import AdminCourse from "../Components/Courses/AdminCourse";
 const Home = Loadable(lazy(() => import("../Components/Home/Home")));
@@ -19,7 +18,6 @@ export default function ROUTES() {
         <Route exact path="/courses" element={<Courses />} />
         <Route exact path="/courses/:id" element={<Course />} />
         <Route exact path="/about" element={<About />} />
-        <Route exact path="/contact" element={<Contact />} />
         <Route
           exact
           path="/admin"

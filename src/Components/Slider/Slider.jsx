@@ -49,7 +49,7 @@ export default function Slider() {
           .filter((img) => img.selected)
           .map((img) => (
             <SwiperSlide key={img.id}>
-              <img src={img.url} alt="my imng" />
+              <img loading="lazy" src={img.url} alt="my imng" />
             </SwiperSlide>
           ))}
       </Swiper>

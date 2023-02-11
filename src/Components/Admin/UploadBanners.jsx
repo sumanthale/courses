@@ -15,16 +15,17 @@ const UploadBanners = () => {
   const [loading, setLoading] = useState(false);
 
   const handleUpload = async () => {
+    const genratedID = uniqid();
     setLoading(true);
     try {
       if (image.file) {
-        let storageRef = ref(storage, uniqid());
+        let storageRef = ref(storage, genratedID);
 
         await uploadBytes(storageRef, image.file);
         console.log("Uploaded a blob or file!");
         const URL = await getDownloadURL(storageRef);
         if (URL) {
-          appendImage(URL);
+          appendImage(URL, genratedID);
           toast.success("Image was uploaded successfully!!");
 
           setImage({

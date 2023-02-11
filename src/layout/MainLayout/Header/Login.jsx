@@ -40,9 +40,11 @@ export default function LoginModal({ open, handleClose }) {
   const handleClickShowPassword = () => setShowPassword((show) => !show);
   const handelSubmit = (e) => {
     e.preventDefault();
-    Promise.all([login({ email, password })]).then(() => {
+    Promise.all([login({ email, password })]).then((data) => {
+      if (!!data[0]) {
+        handleClose();
+      }
       console.log("All promises have resolved");
-      handleClose();
     });
   };
 

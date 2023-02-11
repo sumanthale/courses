@@ -5,6 +5,7 @@ import { AuthProvider } from "./context/AuthContext";
 import NavigationScroll from "./Helpers/NavigationScroll";
 import Footer from "./Components/Footer/Footer";
 import { Toaster } from "react-hot-toast";
+import { Alert } from "@mui/material";
 
 function App() {
   return (
@@ -16,7 +17,9 @@ function App() {
               duration: 5000,
             }}
           />
+
           <Routes />
+
           <Footer />
         </NavigationScroll>
       </AuthProvider>

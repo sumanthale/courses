@@ -86,6 +86,7 @@ export default function themeTypography(theme) {
       minHeight: "calc(100vh - 386px)",
       flexGrow: 1,
       padding: "0 20px",
+
       marginTop: "68px",
       // marginRight: "20px",
       // borderRadius: `10px`,

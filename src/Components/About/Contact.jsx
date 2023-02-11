@@ -65,7 +65,7 @@ const Contact = () => {
               }}
             >
               <Email />
-              <Typography>Email: test@test.com</Typography>
+              <Typography>Email: ltbedutech@gmail.com</Typography>
             </Box>
             <Box
               sx={{
@@ -83,7 +83,7 @@ const Contact = () => {
               }}
             >
               <LocationCity />
-              <Typography>Location: Location Goes here</Typography>
+              <Typography>Location: Hyderabad</Typography>
             </Box>
             <Box
               sx={{
@@ -101,7 +101,7 @@ const Contact = () => {
               }}
             >
               <Call />
-              <Typography>Phone: +91 3435343433</Typography>
+              <Typography>Phone: +91 9398262808</Typography>
             </Box>
           </Box>
         </Box>

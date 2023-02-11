@@ -103,6 +103,7 @@ const Course = () => {
                   height: "70%",
                   width: {
                     lg: "400px",
+                    xs: "100%",
                   },
                   boxShadow: `rgb(0 0 0 / 35%) 0px 5px 15px`,
                   background: "#6c6c6c",
@@ -136,7 +137,19 @@ const Course = () => {
                       my: 1,
                     }}
                   >
-                    Download Course Content
+                    <a
+                      href="https://docs.google.com/forms/d/e/1FAIpQLSear9P1bEHV8C60rTBO2mT2BJf3UQAglbeqyKOdFyAu3KGH5Q/viewform"
+                      target={"_blank"}
+                      rel="noreferrer"
+                      style={{
+                        textDecoration: "none",
+
+                        color: "white",
+                      }}
+                    >
+                      Register For Course
+                    </a>
+                    {/* Download Course Content */}
                   </Button>
                 </Stack>
               </Grid>
@@ -153,11 +166,7 @@ const Course = () => {
             About Course
           </Typography>
 
-          <Box
-            sx={{
-              p: 3,
-            }}
-          >
+          <Box>
             <Accordion
               sx={{
                 background: "#eee",
@@ -237,14 +246,15 @@ const Course = () => {
             variant="h1"
             sx={{
               my: 3,
+              mb: 2,
               textAlign: "center",
             }}
           >
             Training Features
           </Typography>
 
-          <Box sx={{}}>
-            <Grid container spacing={2}>
+          <Box>
+            <Grid container columnSpacing={2}>
               <Grid
                 item
                 lg={4}
@@ -259,20 +269,21 @@ const Course = () => {
                 <div
                   className="item box-bg1"
                   style={{
-                    background: "#a1c163",
+                    background: "#E3FDFD",
                   }}
                 >
                   {" "}
                   <span className="icon feature_box_col_four">
                     <img
-                      src="https://www.ashokitech.com/assets/frontend/images/learn_from_home.png"
+                      loading="lazy"
+                      src="https://img.icons8.com/bubbles/100/null/home-page.png"
                       alt="learn from home"
                     />
                   </span>
-                  <Typography gutterBottom variant="h3" color="white">
+                  <Typography gutterBottom variant="h3">
                     Learn from home
                   </Typography>
-                  <Typography>Stay safe indoors.</Typography>
+                  <Typography variant="body2">Stay safe indoors.</Typography>
                 </div>
               </Grid>
               <Grid
@@ -289,20 +300,23 @@ const Course = () => {
                 <div
                   className="item box-bg2"
                   style={{
-                    background: "#759cbc",
+                    background: "#FFE2E2",
                   }}
                 >
                   {" "}
                   <span className="icon feature_box_col_four">
                     <img
-                      src="https://www.ashokitech.com/assets/frontend/images/beginner_friendly.png"
+                      loading="lazy"
+                      src="https://img.icons8.com/bubbles/100/null/trust.png"
                       alt="beginner friendly"
                     />
                   </span>
-                  <Typography gutterBottom variant="h3" color="white">
+                  <Typography gutterBottom variant="h3">
                     Beginner friendly
                   </Typography>
-                  <Typography>No prior knowledge required</Typography>
+                  <Typography variant="body2">
+                    No prior knowledge required
+                  </Typography>
                 </div>
               </Grid>
               <Grid
@@ -319,20 +333,21 @@ const Course = () => {
                 <div
                   className="item box-bg3"
                   style={{
-                    background: "#dbba5d",
+                    background: "#fef2cd",
                   }}
                 >
                   {" "}
                   <span className="icon feature_box_col_four">
                     <img
-                      src="https://www.ashokitech.com/assets/frontend/images/doubt_clearing.png"
+                      loading="lazy"
+                      src="https://img.icons8.com/bubbles/100/null/short-hair-lady-question-mark.png"
                       alt="doubt clearing"
                     />
                   </span>
-                  <Typography gutterBottom variant="h3" color="white">
+                  <Typography gutterBottom variant="h3">
                     Doubt clearing
                   </Typography>
-                  <Typography>Through Q&amp;A forum</Typography>
+                  <Typography variant="body2">Through Q&amp;A forum</Typography>
                 </div>
               </Grid>
               <Grid
@@ -349,20 +364,23 @@ const Course = () => {
                 <div
                   className="item box-bg4"
                   style={{
-                    background: "#698296",
+                    background: "#B3FFAE",
                   }}
                 >
                   {" "}
                   <span className="icon feature_box_col_four">
                     <img
-                      src="https://www.ashokitech.com/assets/frontend/images/projects.png"
+                      loading="lazy"
+                      src="https://img.icons8.com/bubbles/100/null/task.png"
                       alt="projects"
                     />
                   </span>
-                  <Typography gutterBottom variant="h3" color="white">
+                  <Typography gutterBottom variant="h3">
                     Build a projects
                   </Typography>
-                  <Typography>For hands-on practice.</Typography>
+                  <Typography variant="body2">
+                    For hands-on practice.
+                  </Typography>
                 </div>
               </Grid>
               <Grid
@@ -379,20 +397,21 @@ const Course = () => {
                 <div
                   className="item box-bg5"
                   style={{
-                    background: "#dd967a",
+                    background: "#e2e7ff",
                   }}
                 >
                   {" "}
                   <span className="icon feature_box_col_four">
                     <img
-                      src="https://www.ashokitech.com/assets/frontend/images/downloadable_content.png"
+                      loading="lazy"
+                      src="https://img.icons8.com/bubbles/100/null/downloading-updates.png"
                       alt="downloadable content"
                     />
                   </span>
-                  <Typography gutterBottom variant="h3" color="white">
+                  <Typography gutterBottom variant="h3">
                     Downloadable content
                   </Typography>
-                  <Typography>With lifetime access</Typography>
+                  <Typography variant="body2">With lifetime access</Typography>
                 </div>
               </Grid>
               <Grid
@@ -409,20 +428,21 @@ const Course = () => {
                 <div
                   className="item box-bg6"
                   style={{
-                    background: "#5abfb3",
+                    background: "#f3d7fb",
                   }}
                 >
                   {" "}
                   <span className="icon feature_box_col_four">
                     <img
-                      src="https://www.ashokitech.com/assets/frontend/images/beginner_friendly-1.png"
+                      loading="lazy"
+                      src="https://img.icons8.com/bubbles/100/null/certificate.png"
                       alt="beginner friendly1"
                     />
                   </span>
-                  <Typography gutterBottom variant="h3" color="white">
+                  <Typography gutterBottom variant="h3">
                     Course Completion Certificate
                   </Typography>
-                  <Typography>from Company IT</Typography>
+                  <Typography variant="body2">from LTB infotech IT</Typography>
                 </div>
               </Grid>
             </Grid>
@@ -438,7 +458,7 @@ const Course = () => {
           </Typography>
           <Box
             sx={{
-              p: 3,
+              mb: 3,
             }}
           >
             <Accordion

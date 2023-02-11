@@ -4,7 +4,12 @@ const ImageList = ({ image }) => {
   return (
     <section className="file-list">
       <div className="file-item">
-        <img alt={`img -${image.id} `} src={image.src} className="file-img" />
+        <img
+          loading="lazy"
+          alt={`img -${image.id} `}
+          src={image.src}
+          className="file-img"
+        />
       </div>
     </section>
   );
