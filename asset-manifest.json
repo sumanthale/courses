@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/courses/static/css/main.f1818edd.css",
+    "main.js": "/courses/static/js/main.e18029fa.js",
+    "static/css/763.4b4d53d8.chunk.css": "/courses/static/css/763.4b4d53d8.chunk.css",
+    "static/js/763.3ee43112.chunk.js": "/courses/static/js/763.3ee43112.chunk.js",
+    "static/js/787.1cd9d735.chunk.js": "/courses/static/js/787.1cd9d735.chunk.js",
+    "static/js/624.07a0e17e.chunk.js": "/courses/static/js/624.07a0e17e.chunk.js",
+    "static/media/user-round.svg": "/courses/static/media/user-round.27fe79b102ea6aad2f60e66cff82818d.svg",
+    "static/media/corporate.svg": "/courses/static/media/corporate.cf2b278b2ed0abc7790c7e4c7b9e8b4f.svg",
+    "static/media/about.svg": "/courses/static/media/about.ffdc135e633b2b909a229ae5ca22d24c.svg",
+    "static/media/interview.svg": "/courses/static/media/interview.4d2ded944709555571df2f150bcc9ae4.svg",
+    "static/media/online-training.svg": "/courses/static/media/online-training.708ba4f4c23d958c87d230cfd5555a07.svg",
+    "static/media/training-sessions.svg": "/courses/static/media/training-sessions.a09d87e5ed9325b3158295b2507648e6.svg",
+    "static/media/logo.svg": "/courses/static/media/logo.97ce25419fb4598bee90b43147aca3aa.svg",
+    "static/media/placement.svg": "/courses/static/media/placement.44a3634354966ada65c4eb072a09ad58.svg",
+    "static/media/mentor.svg": "/courses/static/media/mentor.3405b75b6d2c13af9886536b998dd0a4.svg",
+    "index.html": "/courses/index.html",
+    "main.f1818edd.css.map": "/courses/static/css/main.f1818edd.css.map",
+    "main.e18029fa.js.map": "/courses/static/js/main.e18029fa.js.map",
+    "763.4b4d53d8.chunk.css.map": "/courses/static/css/763.4b4d53d8.chunk.css.map",
+    "763.3ee43112.chunk.js.map": "/courses/static/js/763.3ee43112.chunk.js.map",
+    "787.1cd9d735.chunk.js.map": "/courses/static/js/787.1cd9d735.chunk.js.map",
+    "624.07a0e17e.chunk.js.map": "/courses/static/js/624.07a0e17e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f1818edd.css",
+    "static/js/main.e18029fa.js"
+  ]
+}
